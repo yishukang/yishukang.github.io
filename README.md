@@ -138,8 +138,10 @@ featured: true
 
 1. push 到 GitHub 的 `main` 分支。
 2. 打开仓库 Settings → Pages。
-3. Source 选择 `GitHub Actions`。
+3. Source 必须选择 `GitHub Actions`，不要选择 `Deploy from a branch`。如果选了 branch，GitHub Pages 会用 Jekyll 直接读取源码里的 `.astro` 文件，导致 “Invalid YAML front matter” 报错。
 4. 等 Actions 跑完，访问 `https://<username>.github.io`。
+
+仓库里已经包含 `public/.nojekyll`，构建后会进入 `dist/.nojekyll`，用于明确告诉 GitHub Pages 不要对发布产物运行 Jekyll。
 
 ## 当前不包含
 
