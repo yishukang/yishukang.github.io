@@ -37,7 +37,7 @@ export const ui = {
       title: "Work",
       intro:
         "Placeholder frames are ready for real projects. Drop images into public/images and update the matching markdown file.",
-      xiaohongshu: "Xiaohongshu Covers",
+      xiaohongshu: "RedNote Covers",
       posters: "Poster Designs",
       events: "Event Photography",
       xiaohongshuIntro: "3:4 cover systems for social storytelling and product edits.",
@@ -53,13 +53,13 @@ export const ui = {
       bodyOne:
         "My work sits between image-making, people, and place: shaping campaign narratives, coordinating real-world moments, and keeping visual details precise from planning to execution.",
       bodyTwo:
-        "At 178cm, I first learned how posture, styling, lighting, and timing change the feeling of an image. Today, I bring that same attention to marketing strategy, content direction, and event production.",
+        "As a model before, I learned early on how much posture, styling, lighting, and timing can influence the emotion of an image. Today, I apply that same visual sensitivity to marketing strategy, content direction, and event production, creating experiences that feel intentional, polished, and audience-focused.",
       capabilitiesTitle: "What I can bring",
       capabilities: [
         "Marketing strategy and campaign planning",
         "Event coordination from concept to on-site delivery",
         "Content direction for visual-first channels",
-        "Partnership communication across creative teams"
+        "China-UK Media & KOL resource integration & partnership development"
       ]
     },
     services: {
@@ -79,7 +79,7 @@ export const ui = {
       }
     },
     experience: {
-      title: "Experience highlights",
+      title: "Experience Highlights",
       intro:
         "Recent marketing and event work shaped around brand presence, audience flow, and visual consistency.",
       viewProject: "View project",
@@ -87,19 +87,19 @@ export const ui = {
         {
           slug: "byd-london-promotion-support",
           date: "Christmas 2025",
-          title: "BYD London promotion support",
+          title: "BYD UK",
           role: "Marketing activation",
           description:
-            "Supported a London Christmas-season promotional campaign for BYD, helping connect brand messaging with public-facing experience.",
+            "Supported the planning and on-site delivery of BYD UK's Halloween and Christmas campaigns, along with monthly \"Dream Weekend\" events across five UK stores.",
           imageLabel: "BYD London campaign image"
         },
         {
           slug: "haier-horizon-greenwich-event-planning",
           date: "March 2026",
-          title: "Haier Horizon Greenwich event planning",
+          title: "Haier's 2026 Global Launch Event in Greenwich",
           role: "Event planning",
           description:
-            "Planned event flow and coordination details for Haier Horizon Greenwich, with attention to guest experience, space, and campaign presentation.",
+            "Participated in the planning and on-site execution of Haier's 2026 Global Launch Event in Greenwich.",
           imageLabel: "Haier Horizon Greenwich event image"
         }
       ]
@@ -108,26 +108,20 @@ export const ui = {
       backToAbout: "Back to about",
       overview: "Overview",
       contribution: "My contribution",
-      details: "Project notes",
       imageNote: "Add images to public/images/experience/ to replace these placeholders.",
       byd: {
-        title: "BYD London promotion support",
+        title: "BYD UK",
         date: "Christmas 2025",
         role: "Marketing activation",
         client: "BYD · London",
         intro:
           "A Christmas-season London promotion supporting BYD's public-facing brand presence and campaign experience.",
         overview:
-          "I supported the activation around audience-facing communication, visual consistency, and the practical details that help a brand moment feel polished in a busy city environment.",
+          "Led BYD UK event planning, material sourcing, and on-site setup, helping the brand create clearer, more memorable consumer experiences in retail environments.",
         contributions: [
-          "Supported on-site promotional flow and public interaction moments.",
+          "Observed visual details, timing, and audience touchpoints from planning through delivery.",
           "Helped keep brand messaging clear across the campaign experience.",
-          "Observed visual details, timing, and audience touchpoints from planning through delivery."
-        ],
-        details: [
-          "Seasonal promotion in London",
-          "Brand presence and public engagement",
-          "Marketing activation support"
+          "Supported on-site promotional flow and public interaction moments."
         ],
         images: [
           {
@@ -141,23 +135,18 @@ export const ui = {
         ]
       },
       haier: {
-        title: "Haier Horizon Greenwich event planning",
+        title: "Haier's 2026 Global Launch Event in Greenwich",
         date: "March 2026",
         role: "Event planning",
         client: "Haier Horizon · Greenwich",
         intro:
-          "An event planning project focused on guest experience, space flow, and campaign presentation for Haier Horizon Greenwich.",
+          "A global launch event for Haier Horizon in Greenwich, combining brand experience, livestream presentation, and on-site execution.",
         overview:
-          "I planned coordination details around how guests would move through the event, how the brand story would appear in the space, and how the practical schedule could support a smooth live experience.",
+          "The Haier Horizon refrigerator series global launch was themed \"Beyond What You See\", combining an on-site brand experience with global livestreaming at the Queen's House and the Prime Meridian in Greenwich, London. The location symbolised the intersection of vision, boundaries, and time, echoing the Horizon series' concept of looking beyond the visible and exploring future ways of living. Our team delivered the project from event planning and spatial flow to on-site execution and livestream presentation, creating an immersive and internationally resonant brand experience.",
         contributions: [
-          "Planned event flow, timing, and coordination details.",
-          "Considered guest journey, space rhythm, and brand presentation together.",
-          "Supported a clear bridge between marketing goals and on-site delivery needs."
-        ],
-        details: [
-          "Greenwich event planning",
-          "Guest journey and spatial coordination",
-          "Campaign presentation support"
+          "Media, KOL, Organisation & Talent Coordination",
+          "Run-of-Show Coordination & Experience Delivery",
+          "Post-event Data Analysis & Campaign Review"
         ],
         images: [
           {
@@ -182,7 +171,7 @@ export const ui = {
       phone: "+44 7421097828",
       linkedin: "LinkedIn",
       linkedinUrl: "https://www.linkedin.com/in/yishu-kang/",
-      xiaohongshu: "Xiaohongshu",
+      xiaohongshu: "RedNote",
       xiaohongshuUrl: "https://xhslink.com/m/5hBzqkmVSA0"
     },
     cv: {
@@ -279,19 +268,19 @@ export const ui = {
         {
           slug: "byd-london-promotion-support",
           date: "2025 圣诞季",
-          title: "比亚迪伦敦宣传支持",
+          title: "BYD UK",
           role: "Marketing activation",
           description:
-            "参与比亚迪伦敦圣诞季宣传项目，协助品牌信息与线下公众体验之间的衔接。",
+            "参与 BYD UK Halloween 与 Christmas campaigns 的策划和现场执行，并支持英国五家门店每月 Dream Weekend 活动。",
           imageLabel: "比亚迪伦敦宣传图片"
         },
         {
           slug: "haier-horizon-greenwich-event-planning",
           date: "2026 年 3 月",
-          title: "Haier Horizon Greenwich 活动策划",
+          title: "Haier 2026 全球发布会 Greenwich 活动",
           role: "Event planning",
           description:
-            "为 Haier Horizon Greenwich event 进行活动流程与协调细节策划，关注嘉宾体验、空间节奏和品牌呈现。",
+            "参与 Haier 2026 全球发布会 Greenwich 活动的策划与现场执行。",
           imageLabel: "Haier Horizon Greenwich 活动图片"
         }
       ]
@@ -300,26 +289,20 @@ export const ui = {
       backToAbout: "返回关于页",
       overview: "项目概述",
       contribution: "我的参与",
-      details: "项目要点",
       imageNote: "把图片放到 public/images/experience/ 后，这里的占位会自动替换。",
       byd: {
-        title: "比亚迪伦敦宣传支持",
+        title: "BYD UK",
         date: "2025 圣诞季",
         role: "Marketing activation",
         client: "BYD · London",
         intro:
           "面向伦敦圣诞季的比亚迪宣传项目，重点支持品牌在线下公共场景中的露出与体验。",
         overview:
-          "我参与支持 activation 中面向受众的沟通、视觉一致性与现场细节，让品牌在繁忙城市环境中的展示更清晰、更完整。",
+          "负责 BYD UK 活动策划、物料采买、现场搭建与执行落地，帮助品牌在零售场景中建立更清晰、更具记忆点的消费者体验。",
         contributions: [
-          "支持现场宣传动线与公众互动环节。",
+          "关注从规划到执行中的视觉细节、时间节奏和受众触点。",
           "协助品牌信息在活动体验中的清晰呈现。",
-          "关注从规划到执行中的视觉细节、时间节奏和受众触点。"
-        ],
-        details: [
-          "伦敦圣诞季宣传项目",
-          "品牌露出与公众互动",
-          "Marketing activation 支持"
+          "支持现场宣传动线与公众互动环节。"
         ],
         images: [
           {
@@ -333,23 +316,18 @@ export const ui = {
         ]
       },
       haier: {
-        title: "Haier Horizon Greenwich 活动策划",
+        title: "Haier 2026 全球发布会 Greenwich 活动",
         date: "2026 年 3 月",
         role: "Event planning",
         client: "Haier Horizon · Greenwich",
         intro:
-          "为 Haier Horizon Greenwich 进行活动策划，重点关注嘉宾体验、空间动线与 campaign 呈现。",
+          "Haier Horizon 在 Greenwich 举办的全球发布会，结合品牌体验、全球直播与现场执行。",
         overview:
-          "我围绕嘉宾如何进入、移动、观看和互动来规划协调细节，同时考虑品牌故事在空间中的呈现，以及现场时间表如何支撑流畅体验。",
+          "Haier Horizon 冰箱系列全球发布会以 \"Beyond What You See\" 为主题，结合线下体验与全球直播，在伦敦格林威治女王宫及本初子午线举办。该地点象征着视野、边界与时间的交汇，呼应 Horizon 系列“超越眼前所见，探索未来生活方式”的品牌理念。团队负责从活动策划、空间动线到现场执行与直播呈现的完整落地，打造兼具国际感、沉浸感和传播价值的品牌体验。",
         contributions: [
-          "规划活动流程、时间节奏与协调细节。",
-          "把嘉宾体验、空间节奏和品牌呈现放在一起考虑。",
-          "支持 marketing 目标与现场执行需求之间的衔接。"
-        ],
-        details: [
-          "Greenwich 活动策划",
-          "嘉宾动线与空间协调",
-          "Campaign 呈现支持"
+          "Media, KOL, Organisation & Talent Coordination",
+          "Run-of-Show Coordination & Experience Delivery",
+          "Post-event Data Analysis & Campaign Review"
         ],
         images: [
           {

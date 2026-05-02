@@ -1,11 +1,11 @@
 ---
-title_en: "Bloom Pop-up"
-title_zh: "Bloom 快闪"
+title_en: "Shu La La 6 Years Anniversary"
+title_zh: "蜀一蜀二六周年店庆"
 category: "poster"
 date: 2024-06-21
-image: ""
-aspect: "4/5"
-description_en: "Soft editorial poster for a summer pop-up experience."
-description_zh: "面向夏季快闪体验的柔和编辑风海报。"
+image: "/images/posters/shulala.jpg"
+aspect: "1280/1770"
+description_en: "Anniversary promotion poster for Shu La La, featuring a 40% off barbecue offer for the 6-year celebration."
+description_zh: "蜀一蜀二六周年店庆推广海报，突出全场烧烤 6 折优惠信息。"
 featured: false
 ---

@@ -1,11 +1,11 @@
 ---
-title_en: "Gallery Opening"
-title_zh: "画廊开幕现场"
+title_en: "BYD UK Christmas Activation"
+title_zh: "BYD UK 圣诞活动现场"
 category: "event"
 date: 2025-04-12
-image: ""
-aspect: "16/9"
-description_en: "Atmosphere, arrival flow, and guest moments from an opening night."
-description_zh: "记录开幕夜的现场氛围、入场动线与嘉宾瞬间。"
+image: "/images/events/byd.jpeg"
+aspect: "3/2"
+description_en: "Street-level Christmas activation for BYD UK, capturing the branded display, festive setting, and public interaction."
+description_zh: "BYD UK 圣诞街头活动现场，记录品牌展示、节日氛围与公众互动。"
 featured: true
 ---

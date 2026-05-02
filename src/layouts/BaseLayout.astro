@@ -14,7 +14,7 @@ const t = useTranslations(lang);
 const pageTitle = Astro.props.title ? `${Astro.props.title} | ${t.siteName}` : t.siteName;
 const description =
   Astro.props.description ??
-  "London-based marketing and event coordinator with a visual portfolio across Xiaohongshu covers, posters, and event photography.";
+  "London-based marketing and event coordinator with a visual portfolio across RedNote covers, posters, and event photography.";
 const gaMeasurementId = import.meta.env.PUBLIC_GA_MEASUREMENT_ID?.trim();
 const hasGaMeasurementId = gaMeasurementId?.startsWith("G-");
 ---

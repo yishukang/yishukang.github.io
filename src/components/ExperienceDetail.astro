@@ -50,15 +50,6 @@ const project = t.caseStudies[caseKey];
     </div>
   </section>
 
-  <section class="section-tight rule">
-    <div class="wrap notes-grid">
-      <h2>{t.caseStudies.details}</h2>
-      <ul>
-        {project.details.map((item) => <li>{item}</li>)}
-      </ul>
-    </div>
-  </section>
-
   <section class="section rule">
     <div class="wrap image-section">
       <p>{t.caseStudies.imageNote}</p>
@@ -98,8 +89,7 @@ const project = t.caseStudies[caseKey];
     font-size: clamp(1.05rem, 2vw, 1.35rem);
   }
 
-  .case-overview,
-  .notes-grid {
+  .case-overview {
     display: grid;
     grid-template-columns: minmax(12rem, 0.55fr) minmax(0, 1fr);
     gap: clamp(2rem, 6vw, 6rem);
@@ -141,8 +131,7 @@ const project = t.caseStudies[caseKey];
     max-width: 46rem;
   }
 
-  .case-copy h2,
-  .notes-grid h2 {
+  .case-copy h2 {
     margin: 0;
     font-family: var(--serif);
     font-size: clamp(1.75rem, 3vw, 3rem);
@@ -189,20 +178,6 @@ const project = t.caseStudies[caseKey];
     letter-spacing: 0.1em;
   }
 
-  .notes-grid ul {
-    display: grid;
-    gap: 0.8rem;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-
-  .notes-grid li {
-    padding-block: 0.85rem;
-    border-bottom: 1px solid var(--line);
-    color: var(--muted);
-  }
-
   .image-section {
     display: grid;
     gap: 1.5rem;
@@ -239,7 +214,6 @@ const project = t.caseStudies[caseKey];
     .case-hero-grid,
     .case-overview,
     .case-body,
-    .notes-grid,
     .case-images {
       grid-template-columns: 1fr;
     }
