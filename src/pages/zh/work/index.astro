@@ -1,5 +1,82 @@
 ---
-import Work from "../../work/index.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import PortfolioGrid from "@/components/PortfolioGrid.astro";
+import { getCollection } from "astro:content";
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const allWork = await getCollection("work", ({ id }) => !id.startsWith("_"));
 ---
 
-<Work />
+<BaseLayout title={t.nav.work}>
+  <section class="section">
+    <div class="wrap work-intro">
+      <h1 class="page-title">{t.work.title}</h1>
+      <p>{t.work.intro}</p>
+      <div class="anchor-row" aria-label="Work sections">
+        <a href="#xiaohongshu">{t.work.xiaohongshu}</a>
+        <a href="#posters">{t.work.posters}</a>
+        <a href="#events">{t.work.events}</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap section-tight rule">
+    <PortfolioGrid items={allWork} category="xiaohongshu" lang={lang} />
+    <PortfolioGrid items={allWork} category="poster" lang={lang} />
+    <PortfolioGrid items={allWork} category="event" lang={lang} />
+  </div>
+</BaseLayout>
+
+<style>
+  .work-intro {
+    display: grid;
+    gap: 1.5rem;
+  }
+
+  .work-intro p {
+    max-width: 44rem;
+    margin: 0;
+    color: var(--muted);
+    font-size: clamp(1.1rem, 2vw, 1.45rem);
+  }
+
+  .anchor-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem 1.5rem;
+    padding-top: 1.5rem;
+  }
+
+  .anchor-row a {
+    border-bottom: 2px solid var(--accent);
+    font-size: 0.78rem;
+    font-weight: 650;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .anchor-row a:hover {
+    color: var(--accent);
+  }
+
+  @media (max-width: 560px) {
+    .work-intro {
+      gap: 1rem;
+    }
+
+    .work-intro p {
+      font-size: 1rem;
+    }
+
+    .anchor-row {
+      gap: 0.65rem 1rem;
+      padding-top: 0.75rem;
+    }
+
+    .anchor-row a {
+      font-size: 0.7rem;
+    }
+  }
+</style>
