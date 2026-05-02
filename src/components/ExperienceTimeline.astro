@@ -1,0 +1,118 @@
+---
+import type { Lang } from "@/i18n/ui";
+import { pathFor, useTranslations } from "@/i18n/utils";
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+---
+
+<section class="section rule experience-section">
+  <div class="wrap experience-grid">
+    <div class="experience-heading">
+      <h2 class="section-title">{t.experience.title}</h2>
+      <p>{t.experience.intro}</p>
+    </div>
+    <div class="experience-list">
+      {t.experience.items.map((item, index) => (
+        <a class="experience-item" href={pathFor(lang, `/experience/${item.slug}`)}>
+          <span class="experience-number">{String(index + 1).padStart(2, "0")}</span>
+          <div class="experience-copy">
+            <p class="meta">{item.date} · {item.role}</p>
+            <h3>{item.title}</h3>
+            <p>{item.description}</p>
+            <span class="experience-link">{t.experience.viewProject}</span>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .experience-grid {
+    display: grid;
+    grid-template-columns: minmax(16rem, 0.72fr) minmax(0, 1fr);
+    gap: clamp(2rem, 6vw, 6rem);
+    align-items: start;
+  }
+
+  .experience-heading p {
+    max-width: 34rem;
+    margin: 1rem 0 0;
+    color: var(--muted);
+  }
+
+  .experience-list {
+    display: grid;
+    border-top: 1px solid var(--line);
+  }
+
+  .experience-item {
+    display: grid;
+    grid-template-columns: 4rem minmax(0, 1fr);
+    gap: clamp(1rem, 3vw, 2.5rem);
+    align-items: start;
+    padding-block: clamp(1.35rem, 3vw, 2rem);
+    border-bottom: 1px solid var(--line);
+  }
+
+  .experience-item:hover h3 {
+    color: var(--accent);
+  }
+
+  .experience-copy {
+    max-width: 42rem;
+  }
+
+  .experience-copy h3,
+  .experience-copy p {
+    margin: 0;
+  }
+
+  .experience-copy h3 {
+    margin-block: 0.35rem 0.6rem;
+    font-family: var(--serif);
+    font-size: clamp(1.45rem, 3vw, 2.45rem);
+    font-weight: 500;
+    line-height: 1.08;
+  }
+
+  .experience-copy p:not(.meta) {
+    color: var(--muted);
+  }
+
+  .experience-link {
+    display: inline-flex;
+    margin-top: 1rem;
+    color: var(--accent);
+    font-size: 0.72rem;
+    font-weight: 650;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .experience-number {
+    color: var(--accent);
+    font-size: 0.75rem;
+    font-weight: 650;
+    letter-spacing: 0.1em;
+    padding-top: 0.35rem;
+  }
+
+  @media (max-width: 900px) {
+    .experience-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .experience-item {
+      grid-template-columns: 2.25rem minmax(0, 1fr);
+      gap: 1rem;
+    }
+  }
+</style>

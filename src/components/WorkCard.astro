@@ -1,0 +1,86 @@
+---
+import type { CollectionEntry } from "astro:content";
+import type { Lang } from "@/i18n/ui";
+
+interface Props {
+  item: CollectionEntry<"work">;
+  lang: Lang;
+  index: number;
+}
+
+const { item, lang, index } = Astro.props;
+const data = item.data;
+const title = lang === "zh" ? data.title_zh : data.title_en;
+const description = lang === "zh" ? data.description_zh : data.description_en;
+const categoryLabel = {
+  xiaohongshu: "XIAOHONGSHU",
+  poster: "POSTER",
+  event: "EVENT"
+}[data.category];
+const padded = String(index + 1).padStart(2, "0");
+---
+
+<article class={`work-card work-card-${data.category}`}>
+  <div class="work-media" style={`--aspect: ${data.aspect};`}>
+    {data.image ? (
+      <img src={data.image} alt={title} loading="lazy" />
+    ) : (
+      <div class="media-placeholder">
+        <span>{categoryLabel} · {padded}</span>
+      </div>
+    )}
+  </div>
+  <div class="work-copy">
+    <p class="meta">{categoryLabel} · {new Date(data.date).getFullYear()}</p>
+    <h3>{title}</h3>
+    <p>{description}</p>
+  </div>
+</article>
+
+<style>
+  .work-card {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .work-media {
+    aspect-ratio: var(--aspect);
+    overflow: hidden;
+    background: var(--surface);
+  }
+
+  .work-media :global(img),
+  .work-media :global(.media-placeholder) {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 300ms ease, filter 300ms ease;
+  }
+
+  .work-card:hover .work-media :global(img),
+  .work-card:hover .work-media :global(.media-placeholder) {
+    transform: scale(1.025);
+  }
+
+  .work-copy {
+    display: grid;
+    gap: 0.35rem;
+  }
+
+  .work-copy h3,
+  .work-copy p {
+    margin: 0;
+  }
+
+  .work-copy h3 {
+    font-family: var(--serif);
+    font-size: clamp(1.25rem, 2.2vw, 1.75rem);
+    font-weight: 500;
+    line-height: 1.15;
+  }
+
+  .work-copy p:not(.meta) {
+    color: var(--muted);
+    font-size: 0.95rem;
+  }
+</style>

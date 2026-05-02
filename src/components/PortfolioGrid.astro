@@ -1,0 +1,107 @@
+---
+import type { CollectionEntry } from "astro:content";
+import WorkCard from "@/components/WorkCard.astro";
+import type { Lang } from "@/i18n/ui";
+import { useTranslations } from "@/i18n/utils";
+
+interface Props {
+  items: CollectionEntry<"work">[];
+  category: "xiaohongshu" | "poster" | "event";
+  lang: Lang;
+}
+
+const { items, category, lang } = Astro.props;
+const t = useTranslations(lang);
+const sectionTitle = {
+  xiaohongshu: t.work.xiaohongshu,
+  poster: t.work.posters,
+  event: t.work.events
+}[category];
+const sectionIntro = {
+  xiaohongshu: t.work.xiaohongshuIntro,
+  poster: t.work.postersIntro,
+  event: t.work.eventsIntro
+}[category];
+const filtered = items
+  .filter((item) => item.data.category === category)
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+---
+
+<section class="portfolio-section" id={category === "poster" ? "posters" : category === "event" ? "events" : "xiaohongshu"}>
+  <div class="portfolio-heading">
+    <div>
+      <h2 class="section-title">{sectionTitle}</h2>
+      <p>{sectionIntro}</p>
+    </div>
+    <a class="text-link" href={`#${category === "poster" ? "posters" : category === "event" ? "events" : "xiaohongshu"}`}>
+      {t.work.viewSection}
+    </a>
+  </div>
+  <div class={`portfolio-grid grid-${category}`}>
+    {filtered.map((item, index) => <WorkCard item={item} lang={lang} index={index} />)}
+  </div>
+</section>
+
+<style>
+  .portfolio-section {
+    scroll-margin-top: 6rem;
+  }
+
+  .portfolio-section + .portfolio-section {
+    margin-top: clamp(4rem, 8vw, 7rem);
+  }
+
+  .portfolio-heading {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 1.5rem;
+    align-items: end;
+    margin-bottom: clamp(1.75rem, 4vw, 3rem);
+  }
+
+  .portfolio-heading p {
+    max-width: 42rem;
+    margin: 1rem 0 0;
+    color: var(--muted);
+  }
+
+  .portfolio-grid {
+    display: grid;
+    gap: clamp(1rem, 2.4vw, 2rem);
+  }
+
+  .grid-xiaohongshu,
+  .grid-poster {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .grid-event {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  @media (max-width: 900px) {
+    .grid-xiaohongshu,
+    .grid-poster,
+    .grid-event {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (max-width: 620px) {
+    .portfolio-heading {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    .grid-xiaohongshu,
+    .grid-poster,
+    .grid-event {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .portfolio-section + .portfolio-section {
+      margin-top: 4.25rem;
+    }
+  }
+</style>

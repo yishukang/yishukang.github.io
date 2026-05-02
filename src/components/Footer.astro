@@ -1,0 +1,93 @@
+---
+import { type Lang } from "@/i18n/ui";
+import ContactIcon from "@/components/ContactIcon.astro";
+import { pathFor, useTranslations } from "@/i18n/utils";
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+---
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <a class="footer-name" href={pathFor(lang, "/")}>{t.siteName}</a>
+      <p>© 2026 {t.siteName}. {t.footer.rights}</p>
+    </div>
+    <div class="footer-links" aria-label={t.contact.socialLabel}>
+      <a href={t.contact.linkedinUrl} rel="noreferrer">
+        <ContactIcon name="linkedin" />{t.contact.linkedin}
+      </a>
+      <a href={t.contact.xiaohongshuUrl} rel="noreferrer">
+        <ContactIcon name="xiaohongshu" />{t.contact.xiaohongshu}
+      </a>
+    </div>
+    <p class="built">{t.footer.built}</p>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    border-top: 1px solid var(--line);
+    padding-block: 1.25rem;
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 1.5rem;
+    align-items: end;
+    color: var(--muted);
+    font-size: 0.78rem;
+  }
+
+  .footer-name {
+    display: inline-block;
+    margin-bottom: 0.25rem;
+    color: var(--ink);
+    font-family: var(--serif);
+    font-size: 1.15rem;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  .footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .footer-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+  }
+
+  .footer-links a:hover {
+    color: var(--accent);
+  }
+
+  .built {
+    text-align: right;
+  }
+
+  @media (max-width: 760px) {
+    .footer-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .footer-links {
+      justify-content: flex-start;
+    }
+
+    .built {
+      text-align: left;
+    }
+  }
+</style>

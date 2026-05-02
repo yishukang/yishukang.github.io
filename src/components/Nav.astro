@@ -1,0 +1,137 @@
+---
+import LangToggle from "@/components/LangToggle.astro";
+import { type Lang } from "@/i18n/ui";
+import { pathFor, useTranslations } from "@/i18n/utils";
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+const links = [
+  { href: pathFor(lang, "/"), label: t.nav.home },
+  { href: pathFor(lang, "/about"), label: t.nav.about },
+  { href: pathFor(lang, "/work"), label: t.nav.work },
+  { href: pathFor(lang, "/cv"), label: t.nav.cv },
+  { href: pathFor(lang, "/contact"), label: t.nav.contact }
+];
+---
+
+<header class="site-header">
+  <nav class="wrap nav" aria-label="Primary">
+    <a class="brand" href={pathFor(lang, "/")} aria-label={t.siteName}>
+      <span>{t.siteName}</span>
+      {lang === "zh" && <small>{t.siteNameZh}</small>}
+    </a>
+    <div class="nav-right">
+      <div class="nav-links">
+        {links.map((link) => <a href={link.href}>{link.label}</a>)}
+      </div>
+      <LangToggle lang={lang} />
+    </div>
+  </nav>
+</header>
+
+<style>
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background: color-mix(in srgb, var(--bg) 88%, transparent);
+    border-bottom: 1px solid rgba(26, 26, 26, 0.08);
+    backdrop-filter: blur(18px);
+  }
+
+  .nav {
+    min-height: 4.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+  }
+
+  .brand {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.75rem;
+    font-family: var(--serif);
+    font-size: clamp(1.2rem, 2vw, 1.55rem);
+    line-height: 1;
+    white-space: nowrap;
+  }
+
+  .brand small {
+    color: var(--muted);
+    font-family: var(--sans);
+    font-size: 0.75rem;
+  }
+
+  .nav-right,
+  .nav-links {
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-right {
+    gap: clamp(1rem, 3vw, 2.5rem);
+  }
+
+  .nav-links {
+    gap: clamp(0.85rem, 2.4vw, 2.2rem);
+  }
+
+  .nav-links a {
+    color: var(--muted);
+    font-size: 0.72rem;
+    font-weight: 650;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .nav-links a:hover {
+    color: var(--ink);
+  }
+
+  @media (max-width: 720px) {
+    .site-header {
+      position: static;
+    }
+
+    .nav {
+      min-height: auto;
+      padding-block: 0.9rem;
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 0.85rem;
+    }
+
+    .nav-right {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: start;
+      gap: 0.85rem;
+    }
+
+    .nav-links {
+      flex-wrap: wrap;
+      gap: 0.65rem 0.95rem;
+    }
+
+    .nav-links a {
+      font-size: 0.68rem;
+    }
+  }
+
+  @media (max-width: 420px) {
+    .brand {
+      width: 100%;
+      justify-content: space-between;
+    }
+
+    .nav-right {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

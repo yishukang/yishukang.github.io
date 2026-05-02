@@ -1,0 +1,86 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const cvPath = "/cv/yishu-kang-cv.pdf";
+---
+
+<BaseLayout title={t.nav.cv}>
+  <section class="section cv-page">
+    <div class="wrap cv-intro">
+      <div>
+        <h1 class="page-title">{t.cv.title}</h1>
+        <p>{t.cv.intro}</p>
+      </div>
+      <a class="arrow-link" href={cvPath} target="_blank" rel="noreferrer">
+        {t.cv.download}
+      </a>
+    </div>
+  </section>
+
+  <section class="section-tight rule">
+    <div class="wrap">
+      <div class="cv-frame" aria-label={t.cv.fileLabel}>
+        <iframe
+          src={cvPath}
+          title={t.cv.fileLabel}
+        ></iframe>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .cv-intro {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: clamp(1.5rem, 5vw, 4rem);
+    align-items: end;
+  }
+
+  .cv-intro p {
+    max-width: 40rem;
+    margin: 1.25rem 0 0;
+    color: var(--muted);
+    font-size: clamp(1.05rem, 2vw, 1.35rem);
+  }
+
+  .cv-frame {
+    min-height: 72vh;
+    border: 1px solid var(--line);
+    background: var(--surface);
+  }
+
+  iframe {
+    border: 0;
+    display: block;
+    width: 100%;
+    min-height: 72vh;
+  }
+
+  @media (max-width: 720px) {
+    .cv-intro {
+      grid-template-columns: 1fr;
+      align-items: start;
+      gap: 1.25rem;
+    }
+
+    .cv-frame,
+    iframe {
+      min-height: 70svh;
+    }
+  }
+
+  @media (max-width: 560px) {
+    .cv-intro p {
+      font-size: 1rem;
+    }
+
+    .cv-frame,
+    iframe {
+      min-height: 32rem;
+    }
+  }
+</style>
