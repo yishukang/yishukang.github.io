@@ -15,6 +15,8 @@ const pageTitle = Astro.props.title ? `${Astro.props.title} | ${t.siteName}` : t
 const description =
   Astro.props.description ??
   "London-based marketing and event coordinator with a visual portfolio across Xiaohongshu covers, posters, and event photography.";
+const gaMeasurementId = import.meta.env.PUBLIC_GA_MEASUREMENT_ID?.trim();
+const hasGaMeasurementId = gaMeasurementId?.startsWith("G-");
 ---
 
 <!doctype html>
@@ -26,6 +28,19 @@ const description =
     <meta name="generator" content={Astro.generator} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>{pageTitle}</title>
+    {
+      hasGaMeasurementId && (
+        <>
+          <script async src={`https://www.googletagmanager.com/gtag/js?id=${gaMeasurementId}`} />
+          <script is:inline define:vars={{ gaMeasurementId }}>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){window.dataLayer.push(arguments);}
+            gtag("js", new Date());
+            gtag("config", gaMeasurementId);
+          </script>
+        </>
+      )
+    }
   </head>
   <body>
     <div class="site-shell">

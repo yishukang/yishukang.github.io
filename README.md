@@ -25,6 +25,45 @@ npm run preview
 
 `npm run build` 会生成 `dist/`，GitHub Pages 发布的就是这个目录。
 
+## Google Analytics 4
+
+网站已经预留 GA4 统计代码。只有配置了 `PUBLIC_GA_MEASUREMENT_ID` 时，页面才会加载 Google Analytics；不配置时不会输出 GA 脚本。
+
+### 绑定到自己的 Google 账户
+
+1. 打开 `https://analytics.google.com`，使用你自己的 Google 账户登录。
+2. 如果是第一次使用，点击 `Start Measuring`；如果已经有账户，在左下角进入 `Admin`。
+3. 创建一个 GA4 Property，名称可以写 `Yishu Kang Portfolio`。
+4. 添加 `Web` data stream，网站 URL 填你的 GitHub Pages 地址，例如：
+
+```text
+https://<username>.github.io
+```
+
+5. 创建后进入这个 Web stream，复制 `Measurement ID`，格式类似：
+
+```text
+G-XXXXXXXXXX
+```
+
+6. 在 GitHub 仓库中打开 `Settings → Secrets and variables → Actions → Variables`。
+7. 新增 Repository variable：
+
+```text
+Name: PUBLIC_GA_MEASUREMENT_ID
+Value: G-XXXXXXXXXX
+```
+
+8. 重新 push 或手动运行 `Deploy to GitHub Pages` workflow。部署完成后，GA4 通常需要一些时间开始显示数据，可以在 GA4 的 `Realtime` 页面查看是否收到访问。
+
+本地测试可以复制 `.env.example` 为 `.env`，把里面的 ID 改成真实值：
+
+```bash
+cp .env.example .env
+```
+
+`.env` 已在 `.gitignore` 中，不会提交到 GitHub。
+
 ## 上线前需要替换的信息
 
 1. 打开 `astro.config.mjs`，把：
