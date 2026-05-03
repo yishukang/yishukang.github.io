@@ -12,11 +12,19 @@ const { item, lang, index } = Astro.props;
 const data = item.data;
 const title = lang === "zh" ? data.title_zh : data.title_en;
 const description = lang === "zh" ? data.description_zh : data.description_en;
-const categoryLabel = {
-  xiaohongshu: "REDNOTE",
-  poster: "POSTER",
-  event: "EVENT"
-}[data.category];
+const sourceLabel = lang === "zh" ? "查看报道" : "View coverage";
+const categoryLabel =
+  lang === "zh"
+    ? {
+        xiaohongshu: "小红书",
+        poster: "海报",
+        event: "活动"
+      }[data.category]
+    : {
+        xiaohongshu: "REDNOTE",
+        poster: "POSTER",
+        event: "EVENT"
+      }[data.category];
 const padded = String(index + 1).padStart(2, "0");
 ---
 
@@ -34,6 +42,13 @@ const padded = String(index + 1).padStart(2, "0");
     <p class="meta">{categoryLabel} · {new Date(data.date).getFullYear()}</p>
     <h3>{title}</h3>
     <p>{description}</p>
+    {
+      data.externalUrl && (
+        <a class="work-source" href={data.externalUrl} target="_blank" rel="noreferrer">
+          {sourceLabel}
+        </a>
+      )
+    }
   </div>
 </article>
 
@@ -82,5 +97,16 @@ const padded = String(index + 1).padStart(2, "0");
   .work-copy p:not(.meta) {
     color: var(--muted);
     font-size: 0.95rem;
+  }
+
+  .work-source {
+    width: fit-content;
+    margin-top: 0.25rem;
+    border-bottom: 1px solid var(--accent);
+    color: var(--accent);
+    font-size: 0.72rem;
+    font-weight: 650;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
   }
 </style>
