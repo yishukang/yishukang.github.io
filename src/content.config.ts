@@ -12,6 +12,7 @@ const work = defineCollection({
     aspect: z.string().default("3/4"),
     description_en: z.string(),
     description_zh: z.string(),
+    detailPath: z.string().optional(),
     externalUrl: z.string().url().optional(),
     featured: z.boolean().default(false)
   })

@@ -43,7 +43,7 @@ const categories = [
   <section class="section rule">
     <div class="wrap featured-strip">
       {featured.map((item, index) => (
-        <a href={pathFor(lang, "/work")} class="featured-card">
+        <a href={item.data.detailPath ? pathFor(lang, item.data.detailPath) : pathFor(lang, "/work")} class="featured-card">
           <div class="featured-media" style={`aspect-ratio: ${item.data.aspect};`}>
             {item.data.image ? (
               <img
