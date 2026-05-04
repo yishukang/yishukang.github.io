@@ -20,14 +20,14 @@ export const ui = {
       title: "Yishu Kang",
       role: "Marketing & Event Coordinator, London",
       intro:
-        "A former model turning visual sensitivity into memorable campaigns, cultural moments, and event experiences.",
+        "A former model who turns visual sensitivity into memorable campaigns, cultural moments, and event experiences.",
       cta: "View work",
       portrait: "Yishu Kang portrait"
     },
     home: {
       categoriesTitle: "Selected work",
       categoriesIntro:
-        "A quiet archive for cover concepts, poster systems, and live event moments.",
+        "A working archive of cover concepts, poster systems, and live event moments.",
       aboutTitle: "Model eye, marketer's rhythm.",
       aboutText:
         "I bring a visual-first sensibility from fashion and modeling into brand storytelling, content direction, and on-site event coordination.",
@@ -37,7 +37,7 @@ export const ui = {
       title: "Work",
       intro:
         "A selected archive of short-form social content, poster design, and event planning work across hospitality, retail, and global brand launches.",
-      xiaohongshu: "RedNote / Instagram Short Videos",
+      xiaohongshu: "Social Video",
       posters: "Poster Designs",
       events: "Event Planning",
       xiaohongshuIntro: "Short-form restaurant content for RedNote and Instagram, edited for mobile-first viewing and social sharing.",
@@ -53,7 +53,7 @@ export const ui = {
       bodyOne:
         "My work sits between image-making, people, and place: shaping campaign narratives, coordinating real-world moments, and keeping visual details precise from planning to execution.",
       bodyTwo:
-        "As a model before, I learned early on how much posture, styling, lighting, and timing can influence the emotion of an image. Today, I apply that same visual sensitivity to marketing strategy, content direction, and event production, creating experiences that feel intentional, polished, and audience-focused.",
+        "As a former model, I learned early on how much posture, styling, lighting, and timing can influence the emotion of an image. Today, I apply that same visual sensitivity to marketing strategy, content direction, and event production, creating experiences that feel intentional, polished, and audience-focused.",
       capabilitiesTitle: "What I can bring",
       capabilities: [
         "Marketing strategy and campaign planning",
@@ -64,7 +64,7 @@ export const ui = {
     },
     services: {
       title: "Services",
-      intro: "Useful support for brands, venues, and creative teams.",
+      intro: "Flexible support for brands, venues, and creative teams.",
       marketing: {
         title: "Marketing",
         text: "Brand positioning, campaign planning, and content strategy."
@@ -96,7 +96,7 @@ export const ui = {
         {
           slug: "haier-horizon-greenwich-event-planning",
           date: "March 2026",
-          title: "Haier's 2026 Global Launch Event in Greenwich",
+          title: "Haier 2026 Global Launch · Greenwich",
           role: "Event planning",
           description:
             "Supported the global launch of Haier Horizon at Royal Observatory Greenwich, coordinating logistics, venue operations, guest flow and on-site execution.",
@@ -135,7 +135,7 @@ export const ui = {
         ]
       },
       haier: {
-        title: "Haier's 2026 Global Launch Event in Greenwich",
+        title: "Haier 2026 Global Launch · Greenwich",
         date: "March 2026",
         role: "Event planning",
         client: "Haier Horizon · Greenwich",
@@ -177,14 +177,14 @@ export const ui = {
     cv: {
       title: "CV",
       intro:
-        "A formal overview of marketing, PR, content, and event experience for recruiters, brand teams, and collaborators.",
+        "View my full profile, project responsibilities, and educational background.",
       fileLabel: "Yishu Kang CV",
       download: "Open or download PDF",
       missing:
         "The CV preview is currently unavailable. Please use the download link or contact me directly for the latest version."
     },
     footer: {
-      built: "Built for GitHub Pages.",
+      built: "Personal portfolio.",
       rights: "All rights reserved."
     }
   },
@@ -209,8 +209,8 @@ export const ui = {
     home: {
       categoriesTitle: "精选作品",
       categoriesIntro:
-        "用于陈列小红书内容运营、海报视觉系统与活动策划现场的克制作品档案。",
-      aboutTitle: "模特的视觉敏感，营销人的节奏感。",
+        "用于陈列小红书内容运营、海报视觉系统与活动策划现场的精选作品档案。",
+      aboutTitle: "模特的眼光，营销人的节奏。",
       aboutText:
         "我将时尚与模特经历中的视觉判断，带入品牌叙事、内容方向和线下活动协调。",
       aboutLink: "了解我"
@@ -235,7 +235,7 @@ export const ui = {
       bodyOne:
         "我的工作连接视觉、人物与空间：梳理传播叙事，协调真实场景中的活动体验，并在规划到落地的每一步保持对细节的敏感。",
       bodyTwo:
-        "178cm 的模特经历，让我很早理解姿态、造型、光线与时机如何改变一张图的气质。如今，我把这种判断用于营销策略、内容方向和活动执行。",
+        "模特经历让我很早理解，姿态、造型、光线与时机如何改变一张图的气质。如今，我把这种判断用于营销策略、内容方向和活动执行。",
       capabilitiesTitle: "我能给你带来什么",
       capabilities: [
         "营销策略与传播活动策划",
@@ -342,7 +342,7 @@ export const ui = {
       }
     },
     contact: {
-      title: "让我们一起工作",
+      title: "期待合作",
       intro: "欢迎联系营销机会、活动合作、创意项目或作品集交流。",
       emailLabel: "邮箱",
       phoneLabel: "电话",

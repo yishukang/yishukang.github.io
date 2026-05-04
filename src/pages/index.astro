@@ -11,9 +11,9 @@ const t = useTranslations(lang);
 const allWork = await getCollection("work", ({ id }) => !id.startsWith("_"));
 const featured = allWork.filter((item) => item.data.featured).slice(0, 3);
 const categories = [
-  { href: `${pathFor(lang, "/work")}#xiaohongshu`, label: "Social Media Operation", detail: t.work.xiaohongshuIntro },
-  { href: `${pathFor(lang, "/work")}#posters`, label: "Poster Designs", detail: t.work.postersIntro },
-  { href: `${pathFor(lang, "/work")}#events`, label: "Event Planning", detail: t.work.eventsIntro }
+  { href: `${pathFor(lang, "/work")}#xiaohongshu`, label: t.work.xiaohongshu, detail: t.work.xiaohongshuIntro },
+  { href: `${pathFor(lang, "/work")}#posters`, label: t.work.posters, detail: t.work.postersIntro },
+  { href: `${pathFor(lang, "/work")}#events`, label: t.work.events, detail: t.work.eventsIntro }
 ];
 ---
 
