@@ -22,7 +22,7 @@ export const ui = {
       intro:
         "A former model turning visual sensitivity into memorable campaigns, cultural moments, and event experiences.",
       cta: "View work",
-      portrait: "Portrait image / add to public/images/portrait/"
+      portrait: "Yishu Kang portrait"
     },
     home: {
       categoriesTitle: "Selected work",
@@ -36,7 +36,7 @@ export const ui = {
     work: {
       title: "Work",
       intro:
-        "Placeholder frames are ready for real projects. Drop images into public/images and update the matching markdown file.",
+        "A selected archive of short-form social content, poster design, and event planning work across hospitality, retail, and global brand launches.",
       xiaohongshu: "RedNote / Instagram Short Videos",
       posters: "Poster Designs",
       events: "Event Planning",
@@ -47,7 +47,7 @@ export const ui = {
     },
     about: {
       title: "About",
-      portrait: "About portrait / add to public/images/portrait/",
+      portrait: "Yishu Kang portrait",
       lead:
         "I am a London-based marketing and event coordinator with a background in modeling.",
       bodyOne:
@@ -177,11 +177,11 @@ export const ui = {
     cv: {
       title: "CV",
       intro:
-        "A PDF resume view for HR, recruiters, and collaborators who need a quick formal overview.",
+        "A formal overview of marketing, PR, content, and event experience for recruiters, brand teams, and collaborators.",
       fileLabel: "Yishu Kang CV",
       download: "Open or download PDF",
       missing:
-        "Add the resume PDF at public/cv/yishu-kang-cv.pdf to replace this placeholder."
+        "The CV preview is currently unavailable. Please use the download link or contact me directly for the latest version."
     },
     footer: {
       built: "Built for GitHub Pages.",
@@ -218,7 +218,7 @@ export const ui = {
     work: {
       title: "作品",
       intro:
-        "作品图片和项目说明会在这里集中展示，方便快速浏览视觉内容与活动项目。",
+        "围绕餐饮内容、海报视觉与品牌活动展开的作品整理，呈现从社交传播到现场执行的不同项目切面。",
       xiaohongshu: "小红书/Instagram短视频",
       posters: "海报设计",
       events: "活动策划",
@@ -356,10 +356,10 @@ export const ui = {
     },
     cv: {
       title: "简历",
-      intro: "方便招聘方和合作方快速查看正式简历。",
+      intro: "查看完整经历、项目职责与教育背景。",
       fileLabel: "Yishu Kang 简历",
       download: "打开或下载 PDF",
-      missing: "上传简历 PDF 后，这里会显示内嵌预览。"
+      missing: "当前简历预览暂不可用，请使用下载链接或直接联系我获取最新版本。"
     },
     footer: {
       built: "个人作品站。",
