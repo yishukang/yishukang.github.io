@@ -15,6 +15,7 @@ const title = lang === "zh" ? data.title_zh : data.title_en;
 const description = lang === "zh" ? data.description_zh : data.description_en;
 const sourceLabel = lang === "zh" ? "查看报道" : "View coverage";
 const detailHref = data.detailPath ? pathFor(lang, data.detailPath) : undefined;
+const hasVideo = Boolean(data.video);
 const categoryLabel =
   lang === "zh"
     ? {
@@ -33,7 +34,11 @@ const padded = String(index + 1).padStart(2, "0");
 <article class={`work-card work-card-${data.category}`}>
   <div class="work-media" style={`--aspect: ${data.aspect};`}>
     {
-      detailHref ? (
+      hasVideo ? (
+        <video controls preload="metadata" playsinline aria-label={title}>
+          <source src={data.video} type="video/mp4" />
+        </video>
+      ) : detailHref ? (
         <a class="work-media-link" href={detailHref} aria-label={title}>
           {data.image ? (
             <img src={data.image} alt={title} loading="lazy" />
@@ -87,10 +92,15 @@ const padded = String(index + 1).padStart(2, "0");
   }
 
   .work-media :global(img),
+  .work-media :global(video),
   .work-media :global(.media-placeholder) {
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+
+  .work-media :global(img),
+  .work-media :global(.media-placeholder) {
     transition: transform 300ms ease, filter 300ms ease;
   }
 

@@ -37,11 +37,11 @@ export const ui = {
       title: "Work",
       intro:
         "Placeholder frames are ready for real projects. Drop images into public/images and update the matching markdown file.",
-      xiaohongshu: "RedNote Covers",
+      xiaohongshu: "RedNote / Instagram Short Videos",
       posters: "Poster Designs",
       events: "Event Planning",
-      xiaohongshuIntro: "3:4 cover systems for social storytelling and product edits.",
-      postersIntro: "Editorial poster studies for cultural moments and campaigns.",
+      xiaohongshuIntro: "Short-form restaurant content for RedNote and Instagram, edited for mobile-first viewing and social sharing.",
+      postersIntro: "Editorial poster work for cultural moments and campaigns.",
       eventsIntro: "Planning, spatial flow, and live delivery details from event work.",
       viewSection: "View section"
     },
@@ -90,7 +90,7 @@ export const ui = {
           title: "BYD UK",
           role: "Marketing activation",
           description:
-            "Supported the planning and on-site delivery of BYD UK's Halloween and Christmas campaigns, along with monthly \"Dream Weekend\" events across five UK stores.",
+            "Coordinated planning and on-site delivery for BYD UK's retail and PR activations, including Halloween, Christmas and recurring \"Dream Weekend\" campaigns across five flagship stores.",
           imageLabel: "BYD London campaign image"
         },
         {
@@ -99,7 +99,7 @@ export const ui = {
           title: "Haier's 2026 Global Launch Event in Greenwich",
           role: "Event planning",
           description:
-            "Participated in the planning and on-site execution of Haier's 2026 Global Launch Event in Greenwich.",
+            "Supported the global launch of Haier Horizon at Royal Observatory Greenwich, coordinating logistics, venue operations, guest flow and on-site execution.",
           imageLabel: "Haier Horizon Greenwich event image"
         }
       ]
@@ -115,13 +115,13 @@ export const ui = {
         role: "Marketing activation",
         client: "BYD · London",
         intro:
-          "A Christmas-season London promotion supporting BYD's public-facing brand presence and campaign experience.",
+          "A series of BYD UK retail and PR activations connecting festive public engagement, charity fundraising and consistent in-store brand presentation.",
         overview:
-          "Led BYD UK event planning, material sourcing, and on-site setup, helping the brand create clearer, more memorable consumer experiences in retail environments.",
+          "Coordinated BYD UK event planning, material sourcing, store-team communication and on-site setup across retail and public-facing activations. The Christmas campaign connected a London and Manchester road trip with charity fundraising for The Felix Project and The Christie NHS Foundation Trust, while in-store events supported clearer brand presentation and customer engagement across five flagship locations.",
         contributions: [
-          "Observed visual details, timing, and audience touchpoints from planning through delivery.",
-          "Helped keep brand messaging clear across the campaign experience.",
-          "Supported on-site promotional flow and public interaction moments."
+          "Coordinated event timelines, store requirements, vendor communication and on-site setup across multiple BYD UK activations.",
+          "Supported consistent brand presentation across festive campaigns, retail touchpoints and public-facing engagement moments.",
+          "Helped connect campaign execution with audience interaction, charity messaging and post-event delivery needs."
         ],
         images: [
           {
@@ -140,13 +140,13 @@ export const ui = {
         role: "Event planning",
         client: "Haier Horizon · Greenwich",
         intro:
-          "A global launch event for Haier Horizon in Greenwich, combining brand experience, livestream presentation, and on-site execution.",
+          "A global launch event for Haier Horizon at Royal Observatory Greenwich, combining product storytelling, symbolic site selection, guest experience and livestream presentation.",
         overview:
-          "The Haier Horizon refrigerator series global launch was themed \"Beyond What You See\", combining an on-site brand experience with global livestreaming at the Queen's House and the Prime Meridian in Greenwich, London. The location symbolised the intersection of vision, boundaries, and time, echoing the Horizon series' concept of looking beyond the visible and exploring future ways of living. Our team delivered the project from event planning and spatial flow to on-site execution and livestream presentation, creating an immersive and internationally resonant brand experience.",
+          "The Haier Horizon refrigerator series global launch was themed \"Beyond What You See\" and staged between Queen's House and Royal Observatory Greenwich, where the Prime Meridian reinforced the brand's ideas around vision, time and future living. The event combined a hot-air balloon launch moment, product showcase, guest experience and livestream presentation to introduce the Horizon Collection as a premium refrigeration range focused on preservation, intelligence and sustainable living.",
         contributions: [
-          "Media, KOL, Organisation & Talent Coordination",
-          "Run-of-Show Coordination & Experience Delivery",
-          "Post-event Data Analysis & Campaign Review"
+          "Coordinated event logistics, venue operations, supplier communication, guest flow and on-site execution.",
+          "Supported media, KOL, organisation and talent coordination across English and Mandarin-speaking stakeholders.",
+          "Helped align run-of-show delivery, livestream presentation and post-event campaign review."
         ],
         images: [
           {
@@ -219,11 +219,11 @@ export const ui = {
       title: "作品",
       intro:
         "作品图片和项目说明会在这里集中展示，方便快速浏览视觉内容与活动项目。",
-      xiaohongshu: "小红书封面",
+      xiaohongshu: "小红书/Instagram短视频",
       posters: "海报设计",
       events: "活动策划",
-      xiaohongshuIntro: "适合社交传播、产品选题和生活方式内容的 3:4 封面系统。",
-      postersIntro: "面向文化活动、品牌项目和传播主题的编辑感海报练习。",
+      xiaohongshuIntro: "面向餐饮品牌、小红书和 Instagram 传播的移动端短视频内容。",
+      postersIntro: "面向文化活动、品牌项目和传播主题的编辑感海报作品。",
       eventsIntro: "呈现活动策划、空间动线、现场执行与嘉宾体验的项目片段。",
       viewSection: "查看分类"
     },
@@ -268,10 +268,10 @@ export const ui = {
         {
           slug: "byd-london-promotion-support",
           date: "2025 圣诞季",
-          title: "比亚迪UK",
+          title: "比亚迪英国",
           role: "营销活动",
           description:
-            "参与比亚迪UK万圣节与圣诞传播活动的策划和现场执行，并支持英国五家门店每月“梦想周末”活动。",
+            "协调比亚迪英国零售与公关活动的策划和现场执行，包括万圣节、圣诞及五家旗舰店的“梦想周末”活动。",
           imageLabel: "比亚迪伦敦宣传图片"
         },
         {
@@ -280,7 +280,7 @@ export const ui = {
           title: "海尔 2026 格林尼治全球发布会",
           role: "活动策划",
           description:
-            "参与海尔 2026 格林尼治全球发布会的策划与现场执行。",
+            "支持海尔 Horizon 格林尼治全球发布会，协调活动物流、场地运营、嘉宾动线与现场执行。",
           imageLabel: "海尔格林尼治活动图片"
         }
       ]
@@ -291,18 +291,18 @@ export const ui = {
       contribution: "我的参与",
       imageNote: "活动现场实拍",
       byd: {
-        title: "比亚迪UK",
+        title: "比亚迪英国",
         date: "2025 圣诞季",
         role: "营销活动",
         client: "比亚迪 · 伦敦",
         intro:
-          "面向伦敦圣诞季的比亚迪宣传项目，重点支持品牌在线下公共场景中的露出与体验。",
+          "比亚迪英国零售与公关活动项目，连接节日公共互动、公益传播和门店品牌体验。",
         overview:
-          "负责比亚迪UK活动策划、物料采买、现场搭建与执行落地，帮助品牌在零售场景中建立更清晰、更具记忆点的消费者体验。",
+          "协调比亚迪英国活动策划、物料采买、门店团队沟通与现场搭建，覆盖零售门店和公共场景活动。圣诞项目结合伦敦与曼彻斯特路演，为 The Felix Project 和 The Christie NHS Foundation Trust 公益筹款；门店活动则帮助品牌在五家旗舰店中保持清晰、统一且更具记忆点的消费者体验。",
         contributions: [
-          "关注从规划到执行中的视觉细节、时间节奏和受众触点。",
-          "协助品牌信息在活动体验中的清晰呈现。",
-          "支持现场宣传动线与公众互动环节。"
+          "协调活动时间表、门店需求、供应商沟通与现场搭建。",
+          "支持节日活动、零售触点与公众互动中的品牌一致性。",
+          "协助衔接现场执行、受众互动、公益传播与活动后复盘需求。"
         ],
         images: [
           {
@@ -321,13 +321,13 @@ export const ui = {
         role: "活动策划",
         client: "海尔 · 格林尼治",
         intro:
-          "海尔在格林尼治举办的全球发布会，结合品牌体验、全球直播与现场执行。",
+          "海尔 Horizon 在格林尼治皇家天文台举办的全球发布会，结合产品叙事、场地象征、嘉宾体验与全球直播。",
         overview:
-          "海尔冰箱系列全球发布会以“Beyond What You See”为主题，结合线下体验与全球直播，在伦敦格林尼治女王宫及本初子午线举办。该地点象征着视野、边界与时间的交汇，呼应“超越眼前所见，探索未来生活方式”的品牌理念。团队负责从活动策划、空间动线到现场执行与直播呈现的完整落地，打造兼具国际感、沉浸感和传播价值的品牌体验。",
+          "海尔 Horizon 冰箱系列全球发布会以“Beyond What You See”为主题，在格林尼治女王宫与皇家天文台之间展开。本初子午线强化了品牌关于视野、时间与未来生活方式的表达；现场结合热气球发布时刻、产品展示、嘉宾体验与全球直播，呈现 Horizon 系列在保鲜、智能管理和可持续生活方面的产品定位。",
         contributions: [
-          "媒体、达人、机构与嘉宾协调",
-          "活动流程统筹与体验交付",
-          "活动后数据分析与传播复盘"
+          "协调活动物流、场地运营、供应商沟通、嘉宾动线与现场执行。",
+          "支持中英文媒体、达人、机构与嘉宾之间的沟通协作。",
+          "协助衔接活动流程、直播呈现与活动后传播复盘。"
         ],
         images: [
           {

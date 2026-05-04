@@ -24,7 +24,13 @@ const sectionIntro = {
 }[category];
 const filtered = items
   .filter((item) => item.data.category === category)
-  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+  .sort((a, b) => {
+    const orderA = a.data.displayOrder ?? Number.POSITIVE_INFINITY;
+    const orderB = b.data.displayOrder ?? Number.POSITIVE_INFINITY;
+
+    if (orderA !== orderB) return orderA - orderB;
+    return b.data.date.valueOf() - a.data.date.valueOf();
+  });
 ---
 
 <section class="portfolio-section" id={category === "poster" ? "posters" : category === "event" ? "events" : "xiaohongshu"}>

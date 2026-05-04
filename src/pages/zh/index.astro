@@ -42,24 +42,33 @@ const categories = [
 
   <section class="section rule">
     <div class="wrap featured-strip">
-      {featured.map((item, index) => (
-        <a href={item.data.detailPath ? pathFor(lang, item.data.detailPath) : pathFor(lang, "/work")} class="featured-card">
-          <div class="featured-media" style={`aspect-ratio: ${item.data.aspect};`}>
-            {item.data.image ? (
-              <img
-                src={item.data.image}
-                alt={lang === "zh" ? item.data.title_zh : item.data.title_en}
-                loading="lazy"
-              />
-            ) : (
-              <div class="media-placeholder">
-                <span>{item.data.category.toUpperCase()} · {String(index + 1).padStart(2, "0")}</span>
-              </div>
-            )}
-          </div>
-          <h3>{lang === "zh" ? item.data.title_zh : item.data.title_en}</h3>
-        </a>
-      ))}
+      {featured.map((item, index) => {
+        const title = lang === "zh" ? item.data.title_zh : item.data.title_en;
+        const href = item.data.detailPath ? pathFor(lang, item.data.detailPath) : pathFor(lang, "/work");
+
+        return (
+          <article class="featured-card">
+            <div class="featured-media" style={`aspect-ratio: ${item.data.aspect};`}>
+              {item.data.video ? (
+                <video controls preload="metadata" playsinline aria-label={title}>
+                  <source src={item.data.video} type="video/mp4" />
+                </video>
+              ) : item.data.image ? (
+                <a href={href} aria-label={title}>
+                  <img src={item.data.image} alt={title} loading="lazy" />
+                </a>
+              ) : (
+                <a href={href} class="featured-placeholder-link" aria-label={title}>
+                  <div class="media-placeholder">
+                    <span>{item.data.category.toUpperCase()} · {String(index + 1).padStart(2, "0")}</span>
+                  </div>
+                </a>
+              )}
+            </div>
+            <h3><a href={href}>{title}</a></h3>
+          </article>
+        );
+      })}
     </div>
   </section>
 
@@ -133,11 +142,22 @@ const categories = [
     background: var(--surface);
   }
 
+  .featured-media a {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
   .featured-media img,
+  .featured-media video,
   .featured-media :global(.media-placeholder) {
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+
+  .featured-media img,
+  .featured-media :global(.media-placeholder) {
     transition: transform 300ms ease;
   }
 
